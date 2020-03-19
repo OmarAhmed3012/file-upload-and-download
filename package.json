@@ -1,0 +1,33 @@
+{
+  "name": "file-upload",
+  "version": "1.0.0",
+  "description": "file upload and download with gridfs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmarAhmed3012/file-upload-and-download.git"
+  },
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmarAhmed3012/file-upload-and-download/issues"
+  },
+  "homepage": "https://github.com/OmarAhmed3012/file-upload-and-download#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "gridfs-stream": "^1.1.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.5",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^4.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
