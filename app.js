@@ -13,6 +13,18 @@ const app = express()
 
 // Middlewares
 app.use(bodyParser.json())
+
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', '*');
+  if(req.method === 'OPTIONS'){
+      res.header('Access-Control-Allow-Methods', 'PUT', 'PATCH', 'POST', 'DELETE', 'GET');
+      return res.status(200).json({});
+  }
+  next();
+});
+
 app.use(methodOverride('_method'))
 app.set('view engine', 'ejs')
 
@@ -21,6 +33,7 @@ const mongoURI = 'mongodb+srv://user:user@cluster0-vadeb.mongodb.net/test?retryW
 
 //create mongo connection
 const conn = mongoose.createConnection(mongoURI)
+
 
 
 //init gfs
